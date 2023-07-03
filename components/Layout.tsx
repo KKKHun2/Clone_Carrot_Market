@@ -46,15 +46,13 @@ export default function Layout({
       <div className={cls("pt-12", hasTabBar ? "pb-24" : "")}>{children}</div>
       {hasTabBar ? (
         <nav className="bg-white max-w-xl text-gray-700 border-t fixed bottom-0 w-full px-10 pb-5 pt-3 flex justify-between text-xs">
-          <Link href="/">
-            <a
-              className={cls(
+          <Link className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/"
                   ? "text-orange-500"
                   : "hover:text-gray-500 transition-colors"
               )}
-            >
+              href="/">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -70,17 +68,14 @@ export default function Layout({
                 ></path>
               </svg>
               <span>홈</span>
-            </a>
           </Link>
-          <Link href="/community">
-            <a
-              className={cls(
+          <Link className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/community"
                   ? "text-orange-500"
                   : "hover:text-gray-500 transition-colors"
               )}
-            >
+              href="/community">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -96,17 +91,14 @@ export default function Layout({
                 ></path>
               </svg>
               <span>동네생활</span>
-            </a>
           </Link>
-          <Link href="/chats">
-            <a
-              className={cls(
+          <Link className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/chats"
                   ? "text-orange-500"
                   : "hover:text-gray-500 transition-colors"
               )}
-            >
+              href="/chats">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -122,17 +114,14 @@ export default function Layout({
                 ></path>
               </svg>
               <span>채팅</span>
-            </a>
           </Link>
-          <Link href="/live">
-            <a
-              className={cls(
+          <Link className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/live"
                   ? "text-orange-500"
                   : "hover:text-gray-500 transition-colors"
-              )}
-            >
+              )} 
+              href="/live">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -148,17 +137,14 @@ export default function Layout({
                 ></path>
               </svg>
               <span>라이브</span>
-            </a>
           </Link>
-          <Link href="/profile">
-            <a
-              className={cls(
+          <Link className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/profile"
                   ? "text-orange-500"
                   : "hover:text-gray-500 transition-colors"
               )}
-            >
+              href="/profile">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -174,7 +160,6 @@ export default function Layout({
                 ></path>
               </svg>
               <span>나의 캐럿</span>
-            </a>
           </Link>
         </nav>
       ) : null}
